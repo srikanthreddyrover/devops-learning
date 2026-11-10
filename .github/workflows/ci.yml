@@ -1,3 +1,4 @@
+
 name: Python DevOps CI Pipeline
 
 on:
@@ -23,11 +24,11 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          python -m
- pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r python-app/requirements.txt
 
       - name: Run Python Tests
         working-directory: python-app
         run: |
           pytest -v
+
