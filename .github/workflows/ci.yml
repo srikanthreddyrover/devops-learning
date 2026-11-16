@@ -29,6 +29,9 @@ jobs:
 
       - name: Run Python Tests
         working-directory: python-app
+        run: pytest -v
+
+      - name: Build Docker Image
         run: |
-          pytest -v
+          docker build -t python-devops-app:latest ./python-app
 
